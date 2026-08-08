@@ -1,2 +1,4 @@
 index.zip
 notes.txt
+*.aspx
+web.config

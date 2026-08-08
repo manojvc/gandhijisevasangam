@@ -9,25 +9,24 @@
     <meta name="robots" content="index,follow">
     <link rel="canonical" href="https://gandhijisevasangam.org.in/programs/volunteer%20signup.html">
     <link rel="icon" type="image/png" href="../Images/GSS logo.png">
-    <!-- Bootstrap -->
     <link href="../css/bootstrap-4.3.1.css" rel="stylesheet">
-    <!-- Custom Styles -->
     <link href="../css/style.css" rel="stylesheet">
-	
-	 <style>
-    .container{
-      max-width:980px; margin:0 auto;
-    }
 
-    header h1{ 
-		max-width: 1200px;
-    	margin: 0 auto;
-    	padding: 50px 20px;
-		font-size:1.5rem; 
-		 }
+    <style>
+  :root{
+    --accent:#2980b9;
+    --muted:#6c757d;
+    --bg1:#f8f9fa;
+    --bg2:#ffffff;
+    --radius:12px;
+    --card:#ffffff;
+  }
+
+    .container{ max-width:980px; margin:0 auto; }
+    header h1{ max-width: 1200px; margin: 0 auto; padding: 50px 20px; font-size:1.5rem; }
     header p{ margin:0 0 18px; color:var(--muted); }
 
-    form.card{
+    .card{
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
       gap: 12px;
@@ -37,48 +36,15 @@
       border-radius: var(--radius);
       box-shadow: 0 6px 18px rgba(12,40,60,0.06);
     }
-
     .field{ display:flex; flex-direction:column; }
     .field label{ font-size:0.85rem; margin-bottom:6px; }
-    .field input[type="text"],
-    .field input[type="email"],
-    .field input[type="tel"],
-    .field input[type="number"],
-    .field select,
-    .field textarea{
-      padding:10px 12px; border:1px solid #d6e7ee; border-radius:10px;
-      background:var(--card); outline:none;
-      transition: box-shadow 0.18s ease, transform 0.18s ease;
-      font-size:0.95rem;
-    }
-    .field textarea{ min-height:96px; resize:vertical; }
-
-    .field input:focus,
-    .field select:focus,
-    .field textarea:focus{
-      box-shadow: 0 6px 18px rgba(2,136,209,0.08);
-      transform: translateY(-2px);
-    }
-
     .full{ grid-column: 1 / -1; }
-    .radio-group{ display:flex; flex-direction:column; gap:6px; }
-    .radio-row{ display:flex; gap:8px; flex-wrap:wrap; }
-    .radio-row label{ display:inline-flex; align-items:center; gap:6px; background:rgba(255,255,255,0.6); padding:8px 10px; border-radius:8px; border:1px solid #e6f0f4; cursor:pointer; }
-    .note{ font-size:0.85rem; color:var(--muted); margin-top:6px; }
+    .actions{ display:flex; gap:10px; align-items:center; justify-content:flex-start; flex-wrap:wrap; margin-top:12px; }
+    .actions .btn{ border-radius:10px; padding:10px 16px; }
 
-    .actions{ display:flex; gap:10px; align-items:center; justify-content:flex-end; grid-column: 1 / -1; }
-    button.primary{
-      background:var(--accent); color:#fff; border:none; padding:10px 16px; border-radius:10px; cursor:pointer;
-      transition: transform 0.12s ease;
-    }
-    button.primary:active{ transform: translateY(1px); }
-
-    .small{ font-size:0.9rem; color:var(--muted); }
-
-    @media (max-width:520px){
-      form.card{ padding:14px; gap:10px; }
-    }
-  </style>
+    #submitBtn{ background-color: var(--accent); color:#fff; border:none; border-radius:5px; padding:10px 25px; cursor:pointer; }
+    #submitBtn:hover{ background-color:#3498db; color:#fff; }
+    </style>
 </head>
 <body>
     <div class="container-fluid">
@@ -96,215 +62,116 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item"><a class="nav-link" href="../index.html#home">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../index.html#about">About us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../index.html#who%20we%20are">About us</a></li>
                     <li class="nav-item"><a class="nav-link" href="../index.html#programs">Programs</a></li>
                     <li class="nav-item"><a class="nav-link" href="../index.html#impact">Impact</a></li>
                     <li class="nav-item"><a class="nav-link" href="../index.html#contact">Contact Us</a></li>
                     <li class="nav-item"><a class="nav-link" href="../index.html#donate">Donate</a></li>
-					<li class="nav-item active"><a class="nav-link" href="volunteer signup.html">Volunteer Signup</a></li>
+                    <li class="nav-item active"><a class="nav-link" href="volunteer signup.html">Volunteer Signup</a></li>
                 </ul>
             </div>
         </nav>
-		
-	</div>
+    </div>
 
-		
-	<div class="container">
-    <header>
-      <h1>Volunteer Sign-up Form</h1>
-      <p><strong>Join Hands. Serve Communities. Create Impact.</strong></p>
-      <p>Thank you for your interest in volunteering with Gandhiji Seva Sangam (GSS). Please fill in the details below and our team will get in touch with you.</p>
-    
+    <div class="container">
+      <header>
+        <h1>Volunteer Sign-up</h1>
+        <p><strong>Join Hands. Serve Communities. Create Impact.</strong></p>
+        <p>Thank you for your interest in volunteering with Gandhiji Seva Sangam (GSS). This page is now static, so please contact our team directly using the details below.</p>
 
-    <form id="volForm" class="card" novalidate>
-      <div class="field">
-        <label for="name">Full name *</label>
-        <input id="name" name="name" type="text" required />
-      </div>
+        <div id="volForm" class="card">
+          <div class="field full">
+            <label>How to volunteer</label>
+            <p>Send us your full name, phone number, email address, city or district, area of interest, availability, skills, and a short note on why you would like to volunteer.</p>
+          </div>
 
-      <div class="field">
-        <label for="age">Age *</label>
-        <input id="age" name="age" type="number" min="10" required />
-      </div>
+          <div class="field">
+            <label>Email</label>
+            <p><a href="mailto:gssangam1992@gmail.com">gssangam1992@gmail.com</a></p>
+          </div>
 
-      <div class="field">
-        <label for="gender">Gender</label>
-        <select id="gender" name="gender">
-          <option value="">Prefer not to say</option>
-          <option>Female</option>
-          <option>Male</option>
-          <option>Non-binary/Other</option>
-        </select>
-      </div>
+          <div class="field">
+            <label>Phone</label>
+            <p><a href="tel:+919443631146">+91 94436 31146</a></p>
+          </div>
 
-      <div class="field">
-        <label for="mobile">Mobile number *</label>
-        <input id="mobile" name="mobile" type="tel" placeholder="+91 98765 43210" required />
-      </div>
+          <div class="field full">
+            <label>Address</label>
+            <p>10/2, First Floor, Third Main Road, Subramaniapuram, Madurai - 625 011, Tamil Nadu, India</p>
+          </div>
 
-      <div class="field">
-        <label for="email">Email address *</label>
-        <input id="email" name="email" type="email" required />
-      </div>
+          <div class="field full">
+            <label>What to include</label>
+            <p>Please mention your preferred volunteering area such as women empowerment, children and education, youth development, health and hygiene, environment and sustainability, documentation, or community outreach.</p>
+          </div>
 
-      <div class="field">
-        <label for="city">City / District *</label>
-        <input id="city" name="city" type="text" required />
-      </div>
-
-      <div class="field">
-        <label for="preference">Volunteering preference</label>
-        <select id="preference" name="preference">
-          <option value="">Choose one</option>
-          <option>Event support</option>
-          <option>Remote / online</option>
-          <option>Administration</option>
-          <option>Fundraising</option>
-        </select>
-      </div>
-
-      <fieldset class="field full" style="border:0;padding:0;margin:0;">
-        <label>Area of interest *</label>
-        <div class="radio-row" role="radiogroup" aria-label="Area of interest">
-          <label><input type="radio" name="interest" value="Women empowerment" required /> Women empowerment</label>
-          <label><input type="radio" name="interest" value="Children & education" /> Children & education</label>
-          <label><input type="radio" name="interest" value="Youth & skill development" /> Youth & skill development</label>
-          <label><input type="radio" name="interest" value="Health & hygiene" /> Health & hygiene</label>
-          <label><input type="radio" name="interest" value="Environment & sustainability" /> Environment & sustainability</label>
-          <label><input type="radio" name="interest" value="Documentation / content / media" /> Documentation / content / media</label>
-          <label><input type="radio" name="interest" value="Field support & community outreach" /> Field support & community outreach</label>
+          <div class="field full">
+            <p>Once you contact us, our team will respond within 7 working days.</p>
+            <div class="actions">
+              <a href="mailto:gssangam1992@gmail.com?subject=Volunteer%20Signup" class="btn btn-primary" id="submitBtn">Email Us</a>
+              <a href="tel:+919443631146" class="btn btn-outline-secondary">Call Us</a>
+            </div>
+          </div>
         </div>
-      </fieldset>
 
-      <div class="field">
-        <label for="type">Type of Volunteering</label>
-        <select id="type" name="type">
-          <option value="">Select</option>
-          <option>Field-based</option>
-          <option>Online / Remote</option>
-          <option>Both</option>
-        </select>
-      </div>
+        <a href="../index.html#programs" class="btn-back">Back to Programs</a>
+      </header>
+    </div>
 
-      <div class="field">
-        <label for="availability">Availability</label>
-        <select id="availability" name="availability">
-          <option value="">Select</option>
-          <option>Short-term (1-7 days)</option>
-          <option>Medium-term (1-3 months)</option>
-          <option>Long-term (3+ months)</option>
-        </select>
-      </div>
-
-      <div class="field full">
-        <label for="skills"><b>Skills & Experience</b> (Optional)</label>
-        <p>Please mention any relevant skills, qualifications, or experience:</p>
-                <textarea id="skills" name="skills" placeholder="Describe relevant skills, training or past volunteer work"></textarea>
-      </div>
-
-      <div class="field full">
-        <label for="motivation"><b>Motivation</b></label>
-        <p>Why do you want to volunteer?</p>       
-        <textarea id="motivation" name="motivation" placeholder="Your motivation"></textarea>
-      </div>
-
-      <div class="field full">
-        <label for="Consent"><b>Consent</b></label>             
-        <label>
-          <input id="consent" name="consent" type="checkbox" required />
-          I confirm that the information provided is true to the best of my knowledge and I agree to volunteer with Gandhiji Seva Sangam as per mutual understanding. *
-              </div>
-
-      <div class="field full">
-        <label for="Submit"><b>Submit</b></label>
-        <p>📩 Once submitted, our team will contact you within 7 working days.</p>
-        <p>Email: gssangam1992@gmail.com<br>
-          Phone: +91 94436 31146</p>
-        </div>
-		
-		          
-            <a href="../index.html#programs" class="btn-back">Back to Programs</a>
-        </div>
-		</header>
- <section id="contact">
-		 <footer class="footer">
+    <section id="contact">
+      <footer class="footer">
         <div class="footer-container">
-
-            <!-- Contact -->
-            <div class="footer-box">
-                <h3>Contact Us</h3>
-                <p><strong>Address:</strong> 10/2, First Floor, Third Main Road, Subramaniapuram, Madurai – 625 011, Tamil Nadu, India</p>
-                <p><strong>Phone:</strong> +91 94436 31146</p>
-                <p><strong>Email:</strong> <a href="mailto:gssangam1992@gmail.com" class="footer-link">gssangam1992@gmail.com</a></p>
-                <p><strong>Website:</strong> <a href="http://www.gandhijisevasangam.org.in" target="_blank" rel="noopener" class="footer-link">www.gandhijisevasangam.org.in</a></p>
+          <div class="footer-box">
+            <h3>Contact Us</h3>
+            <p><strong>Address:</strong> 10/2, First Floor, Third Main Road, Subramaniapuram, Madurai - 625 011, Tamil Nadu, India</p>
+            <p><strong>Phone:</strong> +91 94436 31146</p>
+            <p><strong>Email:</strong> <a href="mailto:gssangam1992@gmail.com" class="footer-link">gssangam1992@gmail.com</a></p>
+            <p><strong>Website:</strong> <a href="http://www.gandhijisevasangam.org.in" target="_blank" rel="noopener" class="footer-link">www.gandhijisevasangam.org.in</a></p>
+          </div>
+          <div class="footer-box">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="../index.html#home">Home</a></li>
+              <li><a href="../index.html#who%20we%20are">About Us</a></li>
+              <li><a href="../index.html#programs">Programs</a></li>
+              <li><a href="../index.html#impact">Impact</a></li>
+              <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-box">
+            <h3>Follow Us</h3>
+            <div class="social-links">
+              <a href="https://www.facebook.com/gandhijisevasangam" target="_blank" rel="noopener">Facebook</a>
+              <a href="https://twitter.com/gandhijiseva" target="_blank" rel="noopener">Twitter</a>
+              <a href="https://www.instagram.com/gandhijisevasangam" target="_blank" rel="noopener">Instagram</a>
+              <a href="https://www.linkedin.com/company/gandhijisevasangam" target="_blank" rel="noopener">LinkedIn</a>
             </div>
-
-            <!-- Quick Links -->
-            <div class="footer-box">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="../index.html#home">Home</a></li>
-                    <li><a href="../index.html#who we are">About Us</a></li>
-                    <li><a href="../index.html#programs">Programs</a></li>
-                    <li><a href="../index.html#impact">Impact</a></li>
-                    <li><a href="../index.html#contact">Contact</a></li>
-                </ul>
-            </div>
-
-            <!-- Social Networks -->
-            <div class="footer-box">
-                <h3>Follow Us</h3>
-                <div class="social-links">
-                    <a href="https://www.facebook.com/gandhijisevasangam" target="_blank" rel="noopener">Facebook</a>
-                    <a href="https://twitter.com/gandhijiseva" target="_blank" rel="noopener">Twitter</a>
-                    <a href="https://www.instagram.com/gandhijisevasangam" target="_blank" rel="noopener">Instagram</a>
-                    <a href="https://www.linkedin.com/company/gandhijisevasangam" target="_blank" rel="noopener">LinkedIn</a>
-                </div>
-            </div>
-
+          </div>
         </div>
-
-        <!-- Footer Bottom -->
         <div class="footer-bottom">
-            <p>© 2025 Gandhiji Seva Sangam. All Rights Reserved.</p>
+          <p>&copy; 2025 Gandhiji Seva Sangam. All Rights Reserved.</p>
         </div>
-    </footer>
-  </section>
- 
-<!-- Scroll to Top Button -->
-<button id="scrollToTop" title="Go to top">↑</button>
+      </footer>
+    </section>
 
-<!-- body code goes here -->
+    <button id="scrollToTop" title="Go to top">↑</button>
 
+    <script src="../js/jquery-3.3.1.min.js"></script>
+    <script src="../js/popper.min.js"></script>
+    <script src="../js/bootstrap-4.3.1.js"></script>
 
-	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
-	<script src="js/jquery-3.3.1.min.js"></script>
-
-	<!-- Include all compiled plugins (below), or include individual files as needed -->
-  <script src="js/popper.min.js"></script> 
-  <script src="js/bootstrap-4.3.1.js"></script>
-  
-  <!-- Scroll to Top Script -->
-  <script>
-    // Get the button
-    const scrollToTopBtn = document.getElementById('scrollToTop');
-    
-    // Show button when user scrolls down 300px
-    window.onscroll = function() {
-      if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-        scrollToTopBtn.classList.add('show');
-      } else {
-        scrollToTopBtn.classList.remove('show');
-      }
-    };
-    
-    // Scroll to top when button is clicked
-    scrollToTopBtn.addEventListener('click', function() {
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
+    <script>
+      const scrollToTopBtn = document.getElementById('scrollToTop');
+      window.onscroll = function() {
+        if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+          scrollToTopBtn.classList.add('show');
+        } else {
+          scrollToTopBtn.classList.remove('show');
+        }
+      };
+      scrollToTopBtn.addEventListener('click', function() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
       });
-    });
-  </script>
+    </script>
 </body>
 </html>
