@@ -37,7 +37,7 @@
       box-shadow: 0 6px 18px rgba(12,40,60,0.06);
     }
     .field{ display:flex; flex-direction:column; }
-    .field label{ font-size:0.85rem; margin-bottom:6px; }
+    .field label{ font-size:1.05rem; margin-bottom:6px; font-weight:600; color:#1f2d3d; }
     .full{ grid-column: 1 / -1; }
     .actions{ display:flex; gap:10px; align-items:center; justify-content:flex-start; flex-wrap:wrap; margin-top:12px; }
     .actions .btn{ border-radius:10px; padding:10px 16px; }
@@ -149,7 +149,7 @@
           </div>
         </div>
         <div class="footer-bottom">
-          <p>&copy; 2025 Gandhiji Seva Sangam. All Rights Reserved.</p>
+          <p>&copy; <span class="current-year"></span> Gandhiji Seva Sangam. All Rights Reserved.</p>
         </div>
       </footer>
     </section>
@@ -162,6 +162,10 @@
 
     <script>
       const scrollToTopBtn = document.getElementById('scrollToTop');
+      const currentYearElements = document.querySelectorAll('.current-year');
+      currentYearElements.forEach(function(element) {
+        element.textContent = new Date().getFullYear();
+      });
       window.onscroll = function() {
         if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
           scrollToTopBtn.classList.add('show');

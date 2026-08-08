@@ -98,7 +98,7 @@
 
         <!-- Footer Bottom -->
         <div class="footer-bottom">
-            <p>© 2025 Gandhiji Seva Sangam. All Rights Reserved.</p>
+            <p>&copy; <span class="current-year"></span> Gandhiji Seva Sangam. All Rights Reserved.</p>
         </div>
     </footer>
   </section>
@@ -120,6 +120,10 @@
   <script>
     // Get the button
     const scrollToTopBtn = document.getElementById('scrollToTop');
+        const currentYearElements = document.querySelectorAll('.current-year');
+        currentYearElements.forEach(function(element) {
+            element.textContent = new Date().getFullYear();
+        });
     
     // Show button when user scrolls down 300px
     window.onscroll = function() {
